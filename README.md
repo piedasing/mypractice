@@ -1,5 +1,5 @@
 ## Welcome to My GitHub Pages
-我是韋呈，這裡是我的練習作品存放的空間
+我是韋呈，這裡是我的練習作品存放的空間\n
 其中內容包含:
   HTML、CSS、Javascript、jQuery、Bootstrap、Vue js
   撰寫時，是使用 pug + sass 來產生HTML及CSS檔案
