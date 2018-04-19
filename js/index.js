@@ -1,22 +1,22 @@
 cards = [
   {
     "title": "輪播圖",
-    "preview": "./practice/Carousel/public/index.html",
+    "preview": "./practice/Carousel/index.html",
     "id": "p01"
   },
   {
     "title": "時鐘",
-    "preview": "./practice/Clock/public/index.html",
+    "preview": "./practice/Clock/index.html",
     "id": "p02"
   },
   {
     "title": "調色盤",
-    "preview": "./practice/Palette/public/index.html",
+    "preview": "./practice/Palette/index.html",
     "id": "p02"
   },
   {
     "title": "鍵盤爵士鼓",
-    "preview": "./practice/Drum/public/index.html",
+    "preview": "./practice/Drum/index.html",
     "id": "p02"
   },
 ]

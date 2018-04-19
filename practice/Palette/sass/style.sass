@@ -1,0 +1,42 @@
+@mixin size($w,$h:$w)
+  width: $w
+  height: $h
+
+@mixin center
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+
+html,body,#app
+  +size(100%)
+  margin: 0
+  padding: 0
+
+#app
+  h4
+    +center
+  .cards
+    +center
+  input
+    width: 150px
+    margin-bottom: 3px
+    padding: 0
+  @media only screen and (max-width: 576px)
+    input
+      width: 100px
+
+.info
+  .block
+    +size(150px)
+    border: solid 1px #aaa    
+  .colorname
+    +center
+    border-bottom: solid 1px #aaa
+    margin: 0
+    padding: 0
+
+  @media only screen and (max-width: 576px)
+    .block
+      +size(100px)
+  
