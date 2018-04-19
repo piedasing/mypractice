@@ -1,0 +1,52 @@
+@mixin size($w,$h:$w)
+  width: $w
+  height: $h
+
+@mixin center
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+
+html,body
+  +size(100%)
+  +center
+  margin: 0
+  padding: 0 10px
+
+#app
+  +size(100%)
+  margin: 0
+  padding: 0
+
+  .card
+    height: 350px
+    +center
+    margin: 20px
+    padding: 0
+
+    .card_container
+      +size(100%)
+      margin: 0
+      padding: 10px
+      .title
+        width: 100%
+        +center
+        border-bottom: solid 1px #000
+      .preview
+        iframe
+          +size(100%,250px)
+          border: none
+
+      .go
+        height: 40px
+        border-top: solid 1px #000
+        .btn
+          height: 40px
+          position: absolute
+          bottom: 0
+          right: 10px
+
+
+      
+  
