@@ -15,10 +15,10 @@ function play(audio, key){
   audio.play()  //播放音檔
   //播放中 -> 加入 .playing
   key.classList.add('playing');
-  //播完結束 -> 移除 .playing
-  audio.addEventListener('ended',function(){
+  //播完後300msec -> 移除 .playing
+  setTimeout(function(){
     key.classList.remove('playing')
-  })
+  },300)
 }
 window.addEventListener('keydown', playSound)  //按下按鍵，觸發function
 window.addEventListener('click',playSound)
