@@ -1,0 +1,20 @@
+@mixin size($w,$h:$w)
+  width: $w
+  height: $h
+
+@mixin center
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+
+html,body
+  +size(100%)
+  +center
+
+img
+  padding: var(--spacing)
+  background-color: var(--base)
+  filter: blur(var(--blur))
+
+  

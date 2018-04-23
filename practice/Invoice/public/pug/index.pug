@@ -1,0 +1,69 @@
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="shortcut icon" href="./img/icon/icon.png")
+
+    //font-awesome 5.0.8
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous")
+    //bootstrap 4.0.0
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
+    //css
+    link(rel="stylesheet" href="./css/style.css")
+    //vue
+    script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+    
+    title 發票對獎機
+  body
+    #app
+      input.in(type="text" maxlength="3" :value="num")
+      .keys.row
+        .key.col-md-4(data-key="103" v-on:keydown.103="keyplay(103)" v-on:click="clickplay(103)")
+          kbd 7
+          span.sound 
+        .key.col-md-4(data-key="104" v-on:keydown.104="keyplay(104)" v-on:click="clickplay(104)")
+          kbd 8
+          span.sound 
+        .key.col-md-4(data-key="105" v-on:keydown.105="keyplay(105)" v-on:click="clickplay(105)")
+          kbd 9
+          span.sound 
+        .key.col-md-4(data-key="100" v-on:keydown.100="keyplay(100)" v-on:click="clickplay(100)")
+          kbd 4
+          span.sound 
+        .key.col-md-4(data-key="101" v-on:keydown.101="keyplay(101)" v-on:click="clickplay(101)")
+          kbd 5
+          span.sound 
+        .key.col-md-4(data-key="102" v-on:keydown.102="keyplay(102)" v-on:click="clickplay(102)")
+          kbd 6
+          span.sound 
+        .key.col-md-4(data-key="97" v-on:keydown.97="keyplay(97)" v-on:click="clickplay(97)")
+          kbd 1
+          span.sound 
+        .key.col-md-4(data-key="98" v-on:keydown.98="keyplay(98)" v-on:click="clickplay(98)")
+          kbd 2
+          span.sound 
+        .key.col-md-4(data-key="99" v-on:keydown.99="keyplay(99)" v-on:click="clickplay(99)")
+          kbd 3
+          span.sound 
+        .key.col-md-8(data-key="96" v-on:keydown.96="keyplay(96)" v-on:click="clickplay(96)")
+          kbd 0
+          span.sound
+        .key.col-md-4(data-key="187" v-on:keydown.187="keyplay(187)" v-on:click="clickplay(187)")
+          kbd =
+          span.sound
+      audio(data-key="96" src="./sounds/clap.wav")
+      audio(data-key="97" src="./sounds/clap.wav")
+      audio(data-key="98" src="./sounds/clap.wav")
+      audio(data-key="99" src="./sounds/clap.wav")
+      audio(data-key="100" src="./sounds/clap.wav")
+      audio(data-key="101" src="./sounds/clap.wav")
+      audio(data-key="102" src="./sounds/clap.wav")
+      audio(data-key="103" src="./sounds/clap.wav")
+      audio(data-key="104" src="./sounds/clap.wav")
+      audio(data-key="105" src="./sounds/clap.wav")
+      audio(data-key="187" src="./sounds/clap.wav")
+    //js
+    script(src="./js/index.js")
