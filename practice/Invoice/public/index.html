@@ -21,17 +21,21 @@
     <div id="app">
       <input class="in" type="text" maxlength="3" :value="num"/>
       <div class="keys row">
-        <div class="key col-md-4" data-key="103" v-on:keydown.103="keyplay(103)" v-on:click="clickplay(103)"><kbd>7</kbd><span class="sound"> </span></div>
-        <div class="key col-md-4" data-key="104" v-on:keydown.104="keyplay(104)" v-on:click="clickplay(104)"><kbd>8</kbd><span class="sound"> </span></div>
-        <div class="key col-md-4" data-key="105" v-on:keydown.105="keyplay(105)" v-on:click="clickplay(105)"><kbd>9</kbd><span class="sound"> </span></div>
-        <div class="key col-md-4" data-key="100" v-on:keydown.100="keyplay(100)" v-on:click="clickplay(100)"><kbd>4</kbd><span class="sound"> </span></div>
-        <div class="key col-md-4" data-key="101" v-on:keydown.101="keyplay(101)" v-on:click="clickplay(101)"><kbd>5</kbd><span class="sound"> </span></div>
-        <div class="key col-md-4" data-key="102" v-on:keydown.102="keyplay(102)" v-on:click="clickplay(102)"><kbd>6</kbd><span class="sound"> </span></div>
-        <div class="key col-md-4" data-key="97" v-on:keydown.97="keyplay(97)" v-on:click="clickplay(97)"><kbd>1</kbd><span class="sound"> </span></div>
-        <div class="key col-md-4" data-key="98" v-on:keydown.98="keyplay(98)" v-on:click="clickplay(98)"><kbd>2</kbd><span class="sound"> </span></div>
-        <div class="key col-md-4" data-key="99" v-on:keydown.99="keyplay(99)" v-on:click="clickplay(99)"><kbd>3</kbd><span class="sound"> </span></div>
-        <div class="key col-md-8" data-key="96" v-on:keydown.96="keyplay(96)" v-on:click="clickplay(96)"><kbd>0</kbd><span class="sound"></span></div>
-        <div class="key col-md-4" data-key="187" v-on:keydown.187="keyplay(187)" v-on:click="clickplay(187)"><kbd>=</kbd><span class="sound"></span></div>
+        <div class="key col-md-4" data-key="55" v-on:keydown.55="keyplay(55)" v-on:click="clickplay(55)"><kbd>7</kbd><span class="sound"> </span></div>
+        <div class="key col-md-4" data-key="56" v-on:keydown.56="keyplay(56)" v-on:click="clickplay(56)"><kbd>8</kbd><span class="sound"> </span></div>
+        <div class="key col-md-4" data-key="57" v-on:keydown.57="keyplay(57)" v-on:click="clickplay(57)"><kbd>9</kbd><span class="sound"> </span></div>
+        <div class="key col-md-4" data-key="52" v-on:keydown.52="keyplay(52)" v-on:click="clickplay(52)"><kbd>4</kbd><span class="sound"> </span></div>
+        <div class="key col-md-4" data-key="53" v-on:keydown.53="keyplay(53)" v-on:click="clickplay(53)"><kbd>5</kbd><span class="sound"> </span></div>
+        <div class="key col-md-4" data-key="54" v-on:keydown.54="keyplay(54)" v-on:click="clickplay(54)"><kbd>6</kbd><span class="sound"> </span></div>
+        <div class="key col-md-4" data-key="49" v-on:keydown.49="keyplay(49)" v-on:click="clickplay(49)"><kbd>1</kbd><span class="sound"> </span></div>
+        <div class="key col-md-4" data-key="50" v-on:keydown.50="keyplay(50)" v-on:click="clickplay(50)"><kbd>2</kbd><span class="sound"> </span></div>
+        <div class="key col-md-4" data-key="51" v-on:keydown.51="keyplay(51)" v-on:click="clickplay(51)"><kbd>3</kbd><span class="sound"> </span></div>
+        <div class="key col-md-8" data-key="48" v-on:keydown.48="keyplay(48)" v-on:click="clickplay(48)"><kbd>0</kbd><span class="sound"></span></div>
+        <!--.key.col-md-2(data-key="8" v-on:keydown.8="keyplay(8)" v-on:click="clickplay(8)")
+        kbd back
+        span.sound
+        -->
+        <div class="key col-md-4" v-on:click="clickplay(9)"><kbd>clear</kbd><span class="sound"></span></div>
       </div>
       <audio data-key="96" src="./sounds/clap.wav"></audio>
       <audio data-key="97" src="./sounds/clap.wav"></audio>

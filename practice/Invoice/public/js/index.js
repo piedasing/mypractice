@@ -12,9 +12,9 @@ function play(audio,key){
   //播放中 -> 加入 .playing
   key.classList.add('playing');
   //播完結束 -> 移除 .playing
-  audio.addEventListener('ended',function(){
+  setTimeout(function(){
     key.classList.remove('playing')
-  })
+  },300)
 }
 
 //window.addEventListener('keydown', keyplay)  //按下按鍵，觸發function
@@ -22,18 +22,26 @@ function play(audio,key){
 var vm = new Vue({
   el: "#app",
   data: {
-    num: ""
+    num: "",
+    prize: "123"
   },
   methods: {
     clickplay: function(num) {
-      const audio = document.querySelector(`audio[data-key="${num}"]`)
-      const key = document.querySelector(`.key[data-key="${num}"]`)
-      play(audio,key)
+      if(num == "8"){
+        this.num = this.num.substring(0, this.num.length-1)
+      }
+      else if(num == "9"){
+        this.num = ""
+      }
+      else{
+        this.num += String.fromCharCode(num)
+      }
+      if(this.num == this.prize){
+        this.num += "中獎了"
+      }
     },
     keyplay: function(num) {
-      const audio = document.querySelector(`audio[data-key="${num}"]`)
-      const key = document.querySelector(`.key[data-key="${num}"]`)
-      play(audio,key)
-    }
+
+    },
   }
 })

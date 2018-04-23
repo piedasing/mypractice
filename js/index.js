@@ -16,8 +16,8 @@ cards = [
     "preview": "./practice/Drum/public/index.html"
   },
   {
-    "title": "jsCtrlcss",
-    "preview": "./practice/jsCtrlcss/public/index.html"
+    "title": "發票對獎機",
+    "preview": "./practice/Invoice/public/index.html"
   },
 ]
 
