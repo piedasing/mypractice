@@ -1,47 +1,180 @@
+@charset "UTF-8";
 html, body {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
+  font-family: "微軟正黑體";
+  overflow-x: hidden; }
+
+.title {
+  width: 100%;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 0;
-  padding: 0 10px; }
+  background-color: #fff;
+  font-size: 20pt;
+  font-weight: bold; }
 
-#app {
+#nav {
+  display: none; }
+  #nav .sitename {
+    font-size: 25pt; }
+  #nav .fa-bars {
+    color: #fff; }
+  #nav a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+  #nav a:hover {
+    color: #0ff; }
+
+#home {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0; }
-  #app .card {
-    height: 350px;
+  #home .cover {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 20px;
-    padding: 0; }
-    #app .card .card_container {
+    width: 100%;
+    height: 100%;
+    color: #000;
+    background: url("https://source.unsplash.com/2KXEb_8G5vo/800x600") center no-repeat;
+    background-size: cover; }
+    #home .cover h1 {
+      font-weight: 900;
+      margin-bottom: 30px;
+      color: #fff; }
+    #home .cover .content {
       width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 10px; }
-      #app .card .card_container .title {
-        width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      margin-bottom: 30px; }
+      #home .cover .content p {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        border-bottom: solid 1px #000; }
-      #app .card .card_container .preview iframe {
+        color: #eee;
+        font-weight: 400;
+        margin: 20px;
+        word-wrap: break-all;
+        padding: 10px; }
+    #home .cover a {
+      border: solid 1px #00f;
+      color: #000;
+      transition-duration: 0.4s;
+      padding: 15px; }
+    #home .cover a:hover {
+      background-color: #00f;
+      border: solid 1px #fff;
+      color: #fff;
+      transition: 1.5s;
+      font-weight: bold; }
+    #home .cover span:hover:after {
+      content: ">>"; }
+
+#site, #about, #practice {
+  padding: 100px 0;
+  display: none; }
+
+#site .content pre, #about .content pre {
+  font-size: 1.2rem;
+  line-height: 50px;
+  padding: 0 20%;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+  @media screen and (max-width: 576px) {
+    #site .content pre, #about .content pre {
+      padding: 0 15px; } }
+
+#about .content {
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  @media screen and (max-width: 576px) {
+    #about .content {
+      padding: 0 5px; } }
+  #about .content .table-bordered {
+    border-color: #000; }
+    #about .content .table-bordered th {
+      text-align: center;
+      vertical-align: middle;
+      min-width: 90px; }
+    #about .content .table-bordered td {
+      vertical-align: middle;
+      min-width: 90px; }
+
+#about i {
+  font-size: 30pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
+#about a {
+  text-decoration: none;
+  color: #4a4aff; }
+
+#about a:hover {
+  color: #ff2d2d;
+  transition: 1s; }
+
+#practice {
+  width: 100%; }
+  #practice .mycards {
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+    #practice .mycards .card {
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 20px;
+      padding: 0; }
+      #practice .mycards .card .card_container {
         width: 100%;
-        height: 250px;
-        border: none; }
-      #app .card .card_container .go {
-        height: 40px;
-        border-top: solid 1px #000; }
-        #app .card .card_container .go .btn {
+        height: 100%;
+        margin: 0;
+        padding: 10px; }
+        #practice .mycards .card .card_container .title {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          border-bottom: solid 1px #000; }
+        #practice .mycards .card .card_container .preview iframe {
+          width: 100%;
+          height: 250px;
+          border: none; }
+        #practice .mycards .card .card_container .go {
           height: 40px;
-          position: absolute;
-          bottom: 0;
-          right: 10px; }
+          border-top: solid 1px #000; }
+          #practice .mycards .card .card_container .go .btn {
+            height: 40px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px; }
+
+#footer {
+  width: 100%;
+  height: 40px;
+  margin-top: 50px;
+  color: #eee;
+  display: none; }
+  #footer p {
+    font-size: 15pt;
+    line-height: 30pt;
+    text-align: center; }

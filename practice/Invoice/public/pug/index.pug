@@ -21,41 +21,41 @@ html
     #app
       input.in(type="text" maxlength="3" :value="num")
       .keys.row
-        .key.col-md-4(data-key="55" v-on:keydown.55="keyplay(55)" v-on:click="clickplay(55)")
+        .key.col-md-4.col-4(data-key="55" v-on:keydown.55="keyplay(55)" v-on:click="clickplay(55)")
           kbd 7
           span.sound 
-        .key.col-md-4(data-key="56" v-on:keydown.56="keyplay(56)" v-on:click="clickplay(56)")
+        .key.col-md-4.col-4(data-key="56" v-on:keydown.56="keyplay(56)" v-on:click="clickplay(56)")
           kbd 8
           span.sound 
-        .key.col-md-4(data-key="57" v-on:keydown.57="keyplay(57)" v-on:click="clickplay(57)")
+        .key.col-md-4.col-4(data-key="57" v-on:keydown.57="keyplay(57)" v-on:click="clickplay(57)")
           kbd 9
           span.sound 
-        .key.col-md-4(data-key="52" v-on:keydown.52="keyplay(52)" v-on:click="clickplay(52)")
+        .key.col-md-4.col-4(data-key="52" v-on:keydown.52="keyplay(52)" v-on:click="clickplay(52)")
           kbd 4
           span.sound 
-        .key.col-md-4(data-key="53" v-on:keydown.53="keyplay(53)" v-on:click="clickplay(53)")
+        .key.col-md-4.col-4(data-key="53" v-on:keydown.53="keyplay(53)" v-on:click="clickplay(53)")
           kbd 5
           span.sound 
-        .key.col-md-4(data-key="54" v-on:keydown.54="keyplay(54)" v-on:click="clickplay(54)")
+        .key.col-md-4.col-4(data-key="54" v-on:keydown.54="keyplay(54)" v-on:click="clickplay(54)")
           kbd 6
           span.sound 
-        .key.col-md-4(data-key="49" v-on:keydown.49="keyplay(49)" v-on:click="clickplay(49)")
+        .key.col-md-4.col-4(data-key="49" v-on:keydown.49="keyplay(49)" v-on:click="clickplay(49)")
           kbd 1
           span.sound 
-        .key.col-md-4(data-key="50" v-on:keydown.50="keyplay(50)" v-on:click="clickplay(50)")
+        .key.col-md-4.col-4(data-key="50" v-on:keydown.50="keyplay(50)" v-on:click="clickplay(50)")
           kbd 2
           span.sound 
-        .key.col-md-4(data-key="51" v-on:keydown.51="keyplay(51)" v-on:click="clickplay(51)")
+        .key.col-md-4.col-4(data-key="51" v-on:keydown.51="keyplay(51)" v-on:click="clickplay(51)")
           kbd 3
           span.sound 
-        .key.col-md-8(data-key="48" v-on:keydown.48="keyplay(48)" v-on:click="clickplay(48)")
+        .key.col-md-8.col-8(data-key="48" v-on:keydown.48="keyplay(48)" v-on:click="clickplay(48)")
           kbd 0
           span.sound
         //.key.col-md-2(data-key="8" v-on:keydown.8="keyplay(8)" v-on:click="clickplay(8)")
           kbd back
           span.sound
-        .key.col-md-4(v-on:click="clickplay(9)")
-          kbd clear
+        .key.col-md-4.col-4(v-on:click="clickplay(0)")
+          kbd C
           span.sound
       audio(data-key="96" src="./sounds/clap.wav")
       audio(data-key="97" src="./sounds/clap.wav")

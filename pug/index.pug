@@ -8,7 +8,7 @@ html
     link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous")
     //bootstrap 4.0.0
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
-    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+    script(src="https://code.jquery.com/jquery-3.3.1.js"  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
     //vue
@@ -16,13 +16,90 @@ html
     //css
     link(rel="stylesheet"  href="./css/style.css")
 
-    title MySite
+    title Mysite
   body
-    h3 我的網站
-    #app.row
-      .col-12.col-md-3(v-for="card in cards")
-        .card
-          card.card-body(v-bind:card_data = "card")
+    #app
+      #nav.container
+        nav.navbar.navbar-expand-md.navbar-light.bg-dark.fixed-top
+          a(href="#home" v-on:click="home()").navbar-brand.sitename mysite
+          button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navlist" aria-controls="navlist" aria-expanded="false" aria-label="Toggle navigation")
+            i.fas.fa-bars
+
+          .collapse.navbar-collapse#navlist.bg-dark
+            ul.navbar-nav.mr-auto
+              li.nav-item
+                a(href="#site" v-on:click="fn(0)").nav-link.active 關於本站
+              li.nav-item
+                a(href="#about" v-on:click="fn(1)").nav-link.active 關於我
+              li.nav-item 
+                a(href="#practice" v-on:click="fn(2)").nav-link 練習作品
+                
+      #home
+        .cover
+          h1.display-4 Welcome！
+          .content
+            p.lead 這裡是我的個人前端學習成果站
+            hr
+            p 學習就是為了不斷的進步          
+          a.btn.btn-light(href="#site" v-on:click="start()")
+            span Continue
+      #site
+        h3.title 關於本站
+        .content
+          pre {{content}}
+        hr
+      #about
+        h3.title 關於我
+        .content
+          table.table.table-bordered.table-striped
+            tr
+              th 姓名
+              td 陳韋呈
+              th 性別
+              td 男生
+            tr
+              th 出生年份
+              td 84.07
+              th 出生地
+              td 台中
+            tr 
+              th(rowspan="2") 學歷
+              td(colspan="3") 國立雲林科技大學資訊工程系(2013.08 ~ 2017.06)
+            tr
+              td(colspan="3") 國立台中高級工業職業學校電子科(2010.08 ~ 2013.06)
+            tr
+              th(rowspan="3") 社團經驗
+              td(colspan="3") 雲科大溜冰社副社長(2015.08 ~ 2016.07)
+            tr 
+              td(colspan="3") 雲科大溜冰社資訊長(2014.08 ~ 2015.07)
+            tr 
+              td(colspan="3") 帶領營隊：由雲科溜冰社所主辦的哆啦A夢溜冰育樂營(2014.02 、 2015.02 、 2016.02)
+            tr
+              th(rowspan="2") 打工經驗
+              td(colspan="3") 建立畢業生聯誼會社團網站(wordpress)
+            tr 
+              td(colspan="3") 建立學校處室單位網站(wordpress)
+            tr
+              td(colspan="4")
+                .row
+                  a(href="https://www.facebook.com/weicheng.chen.10" target="_blank").col-3
+                    i.fab.fa-facebook-square
+                  a(href="https://github.com/piedasing/mypractice" target="_blank").col-3
+                      i.fab.fa-github
+                  a(href="mailto:a0939732111@gmail.com").col-3
+                      i.fas.fa-envelope
+                  a(href="./img/myline.png").col-3
+                      i.fab.fa-line
+          
+      #practice
+        h3.title 我的練習
+        .mycards.row
+          .col-12.col-md-3(v-for="card in cards")
+            .card
+              card.card-body(v-bind:card_data = "card")
+      
+      #footer.fixed-bottom.bg-dark
+        p 2018.04.24
       
 
     template(lang="pug")#card
@@ -32,7 +109,7 @@ html
         .preview
           iframe(:src="card_data.preview")
         .go
-          a.btn.btn-primary(:href="card_data.preview" target="_blank") go
+          a.btn.btn-primary(:href="card_data.preview" target="_blank") 看詳細
 
 
     //js

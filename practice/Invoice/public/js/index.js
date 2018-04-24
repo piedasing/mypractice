@@ -26,22 +26,20 @@ var vm = new Vue({
     prize: "123"
   },
   methods: {
-    clickplay: function(num) {
-      if(num == "8"){
+    clickplay: function(number) {
+      if(number == "8"){
         this.num = this.num.substring(0, this.num.length-1)
       }
-      else if(num == "9"){
+      else if(number == "0"){
         this.num = ""
       }
       else{
-        this.num += String.fromCharCode(num)
+        this.num += String.fromCharCode(number)
       }
       if(this.num == this.prize){
-        this.num += "中獎了"
+        var result = this.num + "中獎囉"
+        alert(result)
       }
-    },
-    keyplay: function(num) {
-
-    },
+    }
   }
 })

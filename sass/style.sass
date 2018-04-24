@@ -10,43 +10,147 @@
 
 html,body
   +size(100%)
-  +center
   margin: 0
-  padding: 0 10px
+  padding: 0
+  background-color: #ccc
+  font-family: "微軟正黑體"
+  overflow-x: hidden
 
-#app
+.title
+  +size(100%,60px)
+  +center
+  background-color: #fff
+  font-size: 20pt
+  font-weight: bold
+
+#nav
+  display: none
+  .sitename
+    font-size: 25pt
+  .fa-bars
+    color: #fff
+  a
+    color: #fff
+    +center
+  a:hover
+    color: #0ff
+  
+#home
   +size(100%)
   margin: 0
   padding: 0
-
-  .card
-    height: 350px
+  .cover
     +center
-    margin: 20px
-    padding: 0
-
-    .card_container
-      +size(100%)
-      margin: 0
-      padding: 10px
-      .title
-        width: 100%
+    +size(100%)
+    color: #000
+    background: url('https://source.unsplash.com/2KXEb_8G5vo/800x600') center no-repeat 
+    background-size: cover
+    h1
+      font-weight: 900
+      margin-bottom: 30px
+      color: #fff
+    .content
+      width: 100%
+      background-color: rgba(0,0,0,0.4)
+      margin-bottom: 30px
+      p
         +center
-        border-bottom: solid 1px #000
-      .preview
-        iframe
-          +size(100%,250px)
-          border: none
+        color: #eee
+        font-weight: 400
+        margin: 20px
+        word-wrap: break-all
+        padding: 10px
+    a
+      border: solid 1px #00f
+      color: #000
+      transition-duration: 0.4s
+      padding: 15px
+    a:hover
+      background-color: #00f
+      border: solid 1px #fff
+      color: #fff
+      transition: 1.5s
+      font-weight: bold
+    span:hover:after
+      content: ">>"
+#site,#about,#practice
+  padding: 100px 0
+  display: none
+#site,#about
+  .content
+    pre 
+      font-size: 1.2rem
+      line-height: 50px
+      padding: 0 20%
+      white-space: pre-wrap
+      word-wrap: break-word
+      @media screen and (max-width:576px)
+        padding: 0 15px
+#about
+  .content
+    padding: 0 10%
+    @media screen and (max-width:576px)
+      padding: 0 5px
+    +center
+    .table-bordered
+      border-color: #000
+      th
+        text-align: center
+        vertical-align: middle
+        min-width: 90px
+      td
+        vertical-align: middle
+        min-width: 90px
+  i
+    font-size: 30pt
+    +center
+  a
+    text-decoration: none
+    color: #4a4aff
+  a:hover
+    color: #ff2d2d
+    transition: 1s
 
-      .go
-        height: 40px
-        border-top: solid 1px #000
-        .btn
+#practice
+  width: 100%
+  .mycards
+    width: 100%
+    margin: 0
+    padding: 0
+    .card
+      height: 380px
+      +center
+      margin: 20px
+      padding: 0
+      .card_container
+        +size(100%)
+        margin: 0
+        padding: 10px
+        .title
+          width: 100%
+          +center
+          border-bottom: solid 1px #000
+        .preview
+          iframe
+            +size(100%,250px)
+            border: none
+        .go
           height: 40px
-          position: absolute
-          bottom: 0
-          right: 10px
-
-
+          border-top: solid 1px #000
+          .btn
+            height: 40px
+            position: absolute
+            bottom: 10px
+            right: 10px
+  
+#footer
+  +size(100%,40px)
+  margin-top: 50px
+  color: #eee
+  display: none
+  p
+    font-size: 15pt
+    line-height: 30pt
+    text-align: center
       
   
