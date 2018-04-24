@@ -59,7 +59,6 @@ var vm = new Vue({
     fn(i){
       $("#footer").css("display","block")
       $("#home").css("display","none")
-    
       switch(i){
         case 0:
           $("#site").css("display","block")
@@ -77,6 +76,12 @@ var vm = new Vue({
           $("#practice").css("display","block")
           break
       }
+    },
+    loading(){
+      $('.cover').ready(function(){
+        $('#main').css("display","block")
+        $('#loading').hide(1500)
+      })
     }
   }
 })

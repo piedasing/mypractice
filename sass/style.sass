@@ -8,6 +8,32 @@
   justify-content: center
   flex-direction: column
 
+@keyframes sliceIn_left
+  0%
+    transform: translateX(-100px)
+    opacity: 0
+  100%
+    transform: translateX(0px)
+    opacity: 1
+
+@keyframes sliceIn_down
+  0%
+    transform: translateY(-100px)
+    opacity: 0
+  100%
+    transform: translateY(0px)
+    opacity: 1
+
+@keyframes left
+  0% 
+    z-index: 1
+  50% 
+    left: 50px
+
+@keyframes right
+  50% 
+    right: 50px
+
 html,body
   +size(100%)
   margin: 0
@@ -15,6 +41,34 @@ html,body
   background-color: #ccc
   font-family: "微軟正黑體"
   overflow-x: hidden
+
+#loading
+  +size(100%)
+  +center
+  background-color: rgba(255,255,255,0.6)
+  font-weight: bold
+  font-size: 18pt
+  color: rgba(237,153,22,0.8)
+
+  .myloading
+    position: relative
+    width: 110px
+    height: 50px
+    .left,.right
+      position: absolute
+      top: 0
+      width: 50px
+      height: 50px
+      border-radius: 100%
+      animation: 1s ease-in-out infinite
+    .left
+      background: rgb(237,153,22)
+      left: 0
+      animation-name: left
+    .right 
+      background: rgb(88,181,48)
+      right: 0
+      animation-name: right
 
 .title
   +size(100%,60px)
@@ -39,6 +93,7 @@ html,body
   +size(100%)
   margin: 0
   padding: 0
+  animation: sliceIn_left 1s 0.1s ease
   .cover
     +center
     +size(100%)
@@ -75,6 +130,7 @@ html,body
       content: ">>"
 #site,#about,#practice
   padding: 100px 0
+  animation: sliceIn_down 1s 0.1s ease
   display: none
 #site,#about
   .content

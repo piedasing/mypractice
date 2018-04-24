@@ -17,7 +17,14 @@
     <link rel="stylesheet" href="./css/style.css"/>
     <title>Mysite</title>
   </head>
-  <body>
+  <body onload="loading()">
+    <div id="loading">
+      <p>網頁載入中</p>
+      <div class="myloading">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+    </div>
     <div id="app">
       <div class="container" id="nav">
         <nav class="navbar navbar-expand-md navbar-light bg-dark fixed-top"><a class="navbar-brand sitename" href="#home" v-on:click="home()">mysite</a>

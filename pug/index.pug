@@ -17,7 +17,12 @@ html
     link(rel="stylesheet"  href="./css/style.css")
 
     title Mysite
-  body
+  body(onload="loading()")
+    #loading
+      p 網頁載入中
+      .myloading
+        .left
+        .right
     #app
       #nav.container
         nav.navbar.navbar-expand-md.navbar-light.bg-dark.fixed-top
