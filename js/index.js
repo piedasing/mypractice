@@ -13,7 +13,7 @@ cards = [
   },
   {
     "title": "Vue",
-    "preview": "./practice/Vue/public/index.html"
+    "preview": "./practice/myVue/public/index.html"
   },
   {
     "title": "發票對獎機",

@@ -1,8 +1,8 @@
 html
   head
     meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    link(rel="shortcut icon" href="./img/icon/icon.png")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0")
+    //link(rel="shortcut icon" href="./img/icon/icon.png")
 
     //font-awesome 5.0.8
     link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous")
@@ -11,8 +11,6 @@ html
     script(src="https://code.jquery.com/jquery-3.3.1.js"  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
-    //vue
-    script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
     //css
     link(rel="stylesheet"  href="./css/style.css")
 
@@ -80,8 +78,7 @@ html
               td 提供後台給管理者使用
             tr
               td 目前正在學習: github 
-              td 版本控制及託管
-            
+              td 版本控制及託管  
         hr
       
       #about
@@ -150,6 +147,7 @@ html
         .go
           a.btn.btn-primary(:href="card_data.preview" target="_blank") 看詳細
 
-
+    //vue
+    script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
     //js
     script(src="./js/index.js")
