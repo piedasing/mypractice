@@ -144,47 +144,37 @@ html, body {
   animation: sliceIn_down 1s 0.1s ease;
   display: none; }
 
-#site .content pre, #about .content pre {
-  font-size: 1.2rem;
-  line-height: 50px;
-  padding: 0 20%;
-  white-space: pre-wrap;
-  word-wrap: break-word; }
-  @media screen and (max-width: 576px) {
-    #site .content pre, #about .content pre {
-      padding: 0 15px; } }
-
-#about .content {
+#site .content, #about .content {
   padding: 0 10%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column; }
   @media screen and (max-width: 576px) {
-    #about .content {
+    #site .content, #about .content {
       padding: 0 5px; } }
-  #about .content .table-bordered {
+  #site .content .table-bordered, #about .content .table-bordered {
     border-color: #000; }
-    #about .content .table-bordered th {
+    #site .content .table-bordered th, #about .content .table-bordered th {
       text-align: center;
       vertical-align: middle;
       min-width: 90px; }
-    #about .content .table-bordered td {
+    #site .content .table-bordered td, #about .content .table-bordered td {
       vertical-align: middle;
       min-width: 90px; }
 
-#about i {
+#site i, #about i {
   font-size: 30pt;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column; }
 
-#about a {
+#site a, #about a {
   text-decoration: none;
   color: #4a4aff; }
 
-#about a:hover {
+#site a:hover, #about a:hover {
   color: #ff2d2d;
   transition: 1s; }
 
@@ -229,11 +219,11 @@ html, body {
 
 #footer {
   width: 100%;
-  height: 40px;
+  height: 30px;
   margin-top: 50px;
   color: #eee;
   display: none; }
   #footer p {
-    font-size: 15pt;
-    line-height: 30pt;
+    font-size: 11pt;
+    line-height: 22pt;
     text-align: center; }

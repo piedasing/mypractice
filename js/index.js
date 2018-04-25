@@ -1,31 +1,30 @@
 cards = [
   {
-    "title": "輪播圖",
-    "preview": "./practice/Carousel/public/index.html"
-  },
-  {
     "title": "時鐘",
     "preview": "./practice/Clock/public/index.html"
-  },
-  {
-    "title": "調色盤",
-    "preview": "./practice/Palette/public/index.html"
   },
   {
     "title": "鍵盤爵士鼓",
     "preview": "./practice/Drum/public/index.html"
   },
   {
+    "title": "輪播圖",
+    "preview": "./practice/Carousel/public/index.html"
+  },
+  {
+    "title": "Vue",
+    "preview": "./practice/Vue/public/index.html"
+  },
+  {
     "title": "發票對獎機",
     "preview": "./practice/Invoice/public/index.html"
   },
+  {
+    "title": "調色盤",
+    "preview": "./practice/Palette/public/index.html"
+  },
 ]
-var content = "您好，我是陳韋呈，這是我的個人網站，主要是以 pug + sass 撰寫的，目前我已經學習網頁前端約半年左右。涵蓋範圍包括:\n"
-content += "網頁3劍客: html、css、javascript -> 3個基礎網頁語法\n"
-content += "排版框架 : bootstrap -> 用於快速排版及響應式設計\n"
-content += "前端框架 : vue js\n"
-content += "使用過 Wordpress 建置網站 -> 提供後台給管理者使用\n"
-content += "目前正在學習: git -> 版本控制及託管"
+var content = "您好，我是陳韋呈，這裡是我的個人網站，是一個以 pug + SASS 建構完成的網頁。目前我已經學習網頁前端約半年左右。涵蓋範圍包括:"
 
 Vue.component("card",{
   template: "#card",

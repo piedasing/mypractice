@@ -48,11 +48,41 @@ html
             p 學習就是為了不斷的進步          
           a.btn.btn-light(href="#site" v-on:click="start()")
             span Continue
+      
       #site
         h3.title 關於本站
         .content
-          pre {{content}}
+          p {{content}}
+          table.table.table-bordered.table-striped
+            tr
+              th 項目
+              th 名稱
+              th 用途
+            tr
+              th 網頁3要素
+              td HTML、CSS、Javascript
+              td 
+            tr
+              th 排版框架
+              td Bootstrap
+              td 用於快速排版及響應式設計
+            tr
+              th 前端框架
+              td Vue js
+              td 
+            tr
+              th(rowspan="3") 其他
+              td Node js
+              td 曾練習過爬蟲、Line聊天機器人、Webduino開發練習
+            tr
+              td 使用過 Wordpress 建置網站
+              td 提供後台給管理者使用
+            tr
+              td 目前正在學習: github 
+              td 版本控制及託管
+            
         hr
+      
       #about
         h3.title 關於我
         .content
@@ -80,12 +110,15 @@ html
             tr 
               td(colspan="3") 帶領營隊：由雲科溜冰社所主辦的哆啦A夢溜冰育樂營(2014.02 、 2015.02 、 2016.02)
             tr
-              th(rowspan="2") 打工經驗
+              th(rowspan="3") 打工經驗
               td(colspan="3") 建立畢業生聯誼會社團網站(wordpress)
             tr 
               td(colspan="3") 建立學校處室單位網站(wordpress)
             tr
-              td(colspan="4")
+              td(colspan="3") 建立DPMotor Oil網站( <a href="https://piedasing.github.io/dp/" target="_blank">https://piedasing.github.io/dp/</a> )
+            tr
+              th 與我聯繫
+              td(colspan="3")
                 .row
                   a(href="https://www.facebook.com/weicheng.chen.10" target="_blank").col-3
                     i.fab.fa-facebook-square
