@@ -129,7 +129,7 @@ html,body
     span:hover:after
       content: ">>"
 #site,#about,#practice
-  padding: 100px 0
+  padding: 85px 0 30px 0
   animation: sliceIn_down 1s 0.1s ease
   display: none
 
@@ -138,7 +138,12 @@ html,body
     padding: 0 10%
     @media screen and (max-width:576px)
       padding: 0 5px
-    +center
+    p
+      text-align: left
+      font-size: 14pt
+      line-height: 28pt
+      word-wrap: break-word
+      padding: 0 10px
     .table-bordered
       border-color: #000
       th

@@ -24,7 +24,6 @@ cards = [
     "preview": "./practice/Palette/public/index.html"
   },
 ]
-var content = "您好，我是陳韋呈，這裡是我的個人網站，是一個以 pug + SASS 建構完成的網頁。目前我已經學習網頁前端約半年左右。涵蓋範圍包括:"
 
 Vue.component("card",{
   template: "#card",
@@ -34,8 +33,7 @@ Vue.component("card",{
 var vm = new Vue({
   el: "#app",
   data: {
-    cards: cards,
-    content: content
+    cards: cards
   },
   methods: {
     //點擊continue按鈕後，顯示導覽列、產品、footer
