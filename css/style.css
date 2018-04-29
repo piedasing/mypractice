@@ -57,11 +57,11 @@ html, body {
       border-radius: 100%;
       animation: 1s ease-in-out infinite; }
     #loading .myloading .left {
-      background: #ed9916;
+      background: #f54e00;
       left: 0;
       animation-name: left; }
     #loading .myloading .right {
-      background: #58b530;
+      background: #3e435e;
       right: 0;
       animation-name: right; }
 
