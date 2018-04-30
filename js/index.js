@@ -8,20 +8,16 @@ cards = [
     "preview": "./practice/Drum/public/index.html"
   },
   {
-    "title": "輪播圖",
-    "preview": "./practice/Carousel/public/index.html"
+    "title": "輪播圖(bootstrap)",
+    "preview": "./practice/Carousel_bs/public/index.html"
+  },
+  {
+    "title": "輪播圖(Vue)",
+    "preview": "./practice/Carousel_vue/public/index.html"
   },
   {
     "title": "Vue",
     "preview": "./practice/myVue/public/index.html"
-  },
-  {
-    "title": "發票對獎機",
-    "preview": "./practice/Invoice/public/index.html"
-  },
-  {
-    "title": "調色盤",
-    "preview": "./practice/Palette/public/index.html"
   },
 ]
 
