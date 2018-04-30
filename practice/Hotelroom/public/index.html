@@ -1,0 +1,91 @@
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <link rel="shortcut icon" href="./img/icon/icon.png"/>
+    <!--font-awesome 5.0.8-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous"/>
+    <!--bootstrap 4.0.0-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--css-->
+    <link rel="stylesheet" href="./css/style.css"/>
+    <title> </title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 col_edit">
+            <h1>飯店資料</h1>
+            <hr/>
+            <label>折價</label>
+            <input class="form-control" v-model="discount"/>
+            <label>服務費</label>
+            <input class="form-control" v-model="service_fee"/><br/>
+            <h1>房間編輯</h1>
+            <select class="form-control" v-model="edit_id">
+              <option v-for="(r,id) in rooms" v-bind:value="id">{{r.name}}</option>
+            </select>
+            <button class="btn btn-secondary room_edit" @click="addroom">+ 新增房間</button>
+            <hr/>
+            <div class="room_edit" v-for="(room,id) in [rooms[edit_id]]">
+              <label>房間名稱<i class="fa fa-trash cursor_pointer" @click="delete_room(edit_id)"></i></label>
+              <input class="form-control" v-model="room.name"/>
+              <label>價錢</label>
+              <input class="form-control" v-model="room.price"/>
+              <label>折價</label>
+              <input class="form-control" v-model="room.discount"/>
+              <label>英文名稱</label>
+              <input class="form-control" v-model="room.eng"/>
+              <label>房間照片</label>
+              <input class="form-control" v-model="room.cover"/>
+              <label>房間設備</label>
+              <label>早餐
+                <input class="form-control" type="checkbox" v-model="room.equipment.breakfast"/>
+              </label>
+              <label>wifi
+                <input class="form-control" type="checkbox" v-model="room.equipment.wifi"/>
+              </label>
+              <label>浴缸
+                <input class="form-control" type="checkbox" v-model="room.equipment.bathtub"/>
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-9 col_rooms">
+            <h1>房間資料</h1>
+            <div class="row">
+              <div class="col-sm-4 ol_room" v-for="(room,id) in rooms">
+                <room v-bind:room_data="room" v-bind:hotel_discount="discount" v-bind:hotel_fee="service_fee" v-bind:delete_room="delete_room" v-bind:id="id"></room>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <template id="room">
+      <div class="room_container">
+        <div class="cover" v-bind:style="bg_css">
+          <h3>{{room_data.name}}</h3><i class="fa fa-times cross" @click="delete_room(id)"></i>
+        </div>
+        <div class="info">
+          <h5>{{room_data.eng}}
+            <div class="icons"><span v-if="room_data.equipment.breakfast"><i class="fa fa-coffee"></i></span><span v-if="room_data.equipment.bathtub"><i class="fa fa-bath"></i></span><span v-if="room_data.equipment.wifi"><i class="fa fa-wifi"></i></span></div>
+          </h5>
+          <h5>{{room_data.discount}} * {{hotel_discount}} = {{final_discount_show}} 折</h5>
+          <h4>TWD 
+            <s>{{room_data.price}}</s>
+            <div class="final_price">{{final_price}}</div>
+          </h4>
+        </div>
+      </div>
+    </template>
+    <!--vue-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!--js-->
+    <script src="./js/index.js"></script>
+  </body>
+</html>

@@ -16,8 +16,8 @@ cards = [
     "preview": "./practice/Carousel_vue/public/index.html"
   },
   {
-    "title": "Vue",
-    "preview": "./practice/myVue/public/index.html"
+    "title": "飯店房間(Vue)",
+    "preview": "./practice/Hotelroom/public/index.html"
   },
 ]
 
