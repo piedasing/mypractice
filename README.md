@@ -18,6 +18,6 @@ Skills:
 * HTML、CSS、Javascript -> 設計網頁基本架構及樣式
 * 簡單的css動畫效果(@keyframes)
 * Bootstrap -> 製作響應式設計(也會使用CSS @media query設計)
-* Vue js -> 將HTML重複的區塊用template的方式製作，並將資料綁定，方便製作、管理大量類似呈現方式的區塊
+* Vue js
 * 撰寫時，使用 pug + sass
 * 並且會使用gulp
