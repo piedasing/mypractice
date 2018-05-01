@@ -1,5 +1,4 @@
-## Welcome to My GitHub Pages
-# 陳韋呈(Chen Wei Cheng)
+## 陳韋呈(Chen Wei Cheng)
 * 台中人
 * 綽號 : 派大
 * 我的網站 : https://piedasing.github.io/mypractice/
@@ -14,7 +13,7 @@
 |    其他    |  Wordpress     | 提供後台供管理者管理 |
 |            |  Git、Github   | 版本控制及託管 |
 ***
-Skills:
+##### Skills:
 * HTML、CSS、Javascript -> 設計網頁基本架構及樣式
 * 簡單的css動畫效果(@keyframes)
 * Bootstrap -> 製作響應式設計(也會使用CSS @media query設計)
