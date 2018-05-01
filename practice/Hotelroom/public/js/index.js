@@ -155,3 +155,20 @@ var vm = new Vue({
     }
   }
 });
+
+$(window).on('resize',function(){
+  if($(window).innerWidth() < 576){
+    $('#edit').addClass('collapse')
+  }
+  else if($(window).innerWidth() > 576){
+    $('#edit').removeClass('collapse')
+  }
+})
+$(window).on('load',function(){
+  if($(window).innerWidth() < 576){
+    $('#edit').addClass('collapse')
+  }
+  else if($(window).innerWidth() > 576){
+    $('#edit').removeClass('collapse')
+  }
+})

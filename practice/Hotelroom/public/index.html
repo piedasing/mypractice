@@ -17,9 +17,10 @@
   </head>
   <body>
     <div id="app">
-      <div class="container-fluid">
+      <div class="container-fluid navbar-expand-md">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#edit" aria-controls="edit" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon bg-dark"></span></button>
         <div class="row">
-          <div class="col-sm-3 col_edit">
+          <div class="col-12 col-md-3 col_edit" id="edit">
             <h1>飯店資料</h1>
             <hr/>
             <label>折價</label>
@@ -55,10 +56,10 @@
               </label>
             </div>
           </div>
-          <div class="col-sm-9 col_rooms">
+          <div class="col-12 col-md-9 col_rooms">
             <h1>房間資料</h1>
             <div class="row">
-              <div class="col-sm-4 ol_room" v-for="(room,id) in rooms">
+              <div class="col-12 col-md-4 ol_room" v-for="(room,id) in rooms">
                 <room v-bind:room_data="room" v-bind:hotel_discount="discount" v-bind:hotel_fee="service_fee" v-bind:delete_room="delete_room" v-bind:id="id"></room>
               </div>
             </div>

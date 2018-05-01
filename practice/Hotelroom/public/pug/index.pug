@@ -17,9 +17,11 @@ html
     title 
   body
     #app
-      .container-fluid
+      .container-fluid.navbar-expand-md
+        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#edit" aria-controls="edit" aria-expanded="false" aria-label="Toggle navigation")
+          span.navbar-toggler-icon.bg-dark
         .row
-          .col-sm-3.col_edit
+          .col-12.col-md-3.col_edit#edit
             h1 飯店資料
             hr
             label 折價
@@ -51,10 +53,10 @@ html
                 input.form-control(type="checkbox" v-model="room.equipment.wifi")
               label 浴缸
                 input.form-control(type="checkbox" v-model="room.equipment.bathtub")
-          .col-sm-9.col_rooms
+          .col-12.col-md-9.col_rooms
             h1 房間資料
             .row
-              .col-sm-4.ol_room(v-for="(room,id) in rooms")
+              .col-12.col-md-4.ol_room(v-for="(room,id) in rooms")
                 room(v-bind:room_data="room", 
                     v-bind:hotel_discount="discount",
                     v-bind:hotel_fee="service_fee",
