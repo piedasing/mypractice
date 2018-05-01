@@ -4,6 +4,9 @@ html, body {
   height: 100%;
   overflow: hidden; }
 
+.fa-bars {
+  color: black; }
+
 .cursor_pointer {
   cursor: pointer; }
 
