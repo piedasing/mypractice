@@ -6,7 +6,7 @@
 ***
 |   學習項目   |   名稱    |   用途   |
 |:-----------:|:---------|:---------|
-|  網頁三元素 |  HTML、CSS、Javascript ||
+|  網頁三元素 |  HTML、CSS、Javascript | 設計網頁基本架構及樣式 |
 |  排版框架   |  Bootstrap    | 快速排版及響應式設計 |
 |  前端框架   |  Vue js       ||
 |            |  Node js      | 曾經練習過爬蟲、LineBot、Webduino開發 |
@@ -15,7 +15,7 @@
 ***
 ##### Skills:
 * HTML、CSS、Javascript -> 設計網頁基本架構及樣式
-* 簡單的css動畫效果(@keyframes)
+* 製作簡單的css動畫效果(@keyframes)
 * Bootstrap -> 製作響應式設計(也會使用CSS @media query設計)
 * Vue js
 * 撰寫時，使用 pug + sass
