@@ -19,4 +19,4 @@
 * Bootstrap -> 製作響應式設計(也會使用CSS @media query設計)
 * Vue js
 * 撰寫時，使用 pug + sass
-* 並且會使用gulp
+* 並且使用gulp(編譯pug、編譯sass以及Browser-sync)
