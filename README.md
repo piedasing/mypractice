@@ -14,9 +14,7 @@
 |           |  Git、Github   | 版本控制及託管 |
 ***
 ##### Skills:
-* HTML、CSS、Javascript -> 設計網頁基本架構及樣式
-* 製作簡單的css動畫效果(@keyframes)
+* 製作css動畫效果(@keyframes)
 * Bootstrap -> 製作響應式設計(也會使用CSS @media query設計)
-* Vue js
 * 撰寫時，使用 pug + sass
 * 並且使用gulp(編譯pug、編譯sass以及Browser-sync)
