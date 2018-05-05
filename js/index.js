@@ -19,6 +19,10 @@ cards = [
     "title": "飯店房間(Vue)",
     "preview": "./practice/Hotelroom/public/index.html"
   },
+  {
+	"title": "飯店房間(React)",
+	"preview": "https://piedasing.github.io/hotelroom-react-/"
+  }
 ]
 
 Vue.component("card",{
@@ -69,6 +73,12 @@ var vm = new Vue({
           $("#practice").css("display","block")
           break
       }
+    },
+    loading(){
+      $('.cover').ready(function(){
+        $('#main').css("display","block")
+        $('#loading').hide(1500)
+      })
     }
   }
 })
@@ -88,7 +98,7 @@ function loading(){
 //***************************************************//
 //***************************************************//
 //***************************************************//
-//螢幕小於576px，點擊選單項目後會自動收合(再點一次按鈕)
+//螢幕小於5760px，點擊選單項目後會自動收合(再點一次按鈕)
 $(function(){
   if($(window).width() < 576){
     $(".navbar a").on("click",function(){

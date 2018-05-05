@@ -20,22 +20,20 @@ html, body
   +flex_center
 
 .postarea
-  +size(930px,250px)
+  +size(100%,250px)
   white-space: nowrap
   
 .posts
   height: 100%
-  position: relative
+  position: relative 
   transition: 0.5s
   
 .postbox
   display: inline-block
   height: 100%
-  
+
   .cover
-    +size(330px,100%)
-    margin-left: 300px
-    margin-right: 300px
+    +size(40%,100%)
     background-size: cover
     background-position: center
     +flex_center
@@ -43,14 +41,14 @@ html, body
     cursor: pointer
     
     &:hover
-      +size(340px,110%)
-      
+      +size(42%,110%)
       .infos
         transform: translateX(-200px) translateY(-10px)
+  
     
   .infos
     colors: white
-    transform: translateX(-200px)
+    //transform: translateX(-200px)
     text-shadow: 0px 0px 30px rgba(black,0.3)
     +trans
     
@@ -58,16 +56,34 @@ html, body
       margin: 0
     h1
       margin-bottom: 10px
-      font-size: 50px
+      //font-size: 50px
       font-weight: 400
       color: white
     h5
       background-color: white
       color: black
       padding: 4px 12px
-      font-size: 20px
+      //font-size: 20px
       font-weight: 300
       box-shadow: 0px 0px 30px rgba(black,0.3)
+@media screen and (max-width: 576px)
+  .cover
+    margin: 0 100px
+  .infos
+    transform: translateX(-50px)
+    h1
+      font-size: 30px
+    h5
+      font-size: 11px
+@media screen and (min-width: 577px)
+  .cover
+    margin: 0 500px
+  .infos
+    transform: translateX(-200px)
+    h1
+      font-size: 50px
+    h5
+      font-size: 20px
 
 @keyframes fadeIn
   0%

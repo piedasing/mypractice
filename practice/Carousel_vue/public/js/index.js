@@ -20,12 +20,15 @@ var vm = new Vue({
   data: {
     now_index: 0 ,
     works: works,
-    span: 930
+    span: 1200
   },
   computed: {
     computed_left(){
+      this.span = $(window).width()
+      var span = this.span
+      console.log(span)
       var result = {
-        "left":((-1)* this.now_index * this.span) + "px"
+        "left":((-1)* this.now_index * span) + "px"
       };
       return result
     }
