@@ -26,6 +26,7 @@ var vm = new Vue({
     computed_left(){
       this.span = $(window).width()
       var span = this.span
+      span = 3000
       console.log(span)
       var result = {
         "left":((-1)* this.now_index * span) + "px"

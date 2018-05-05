@@ -24,8 +24,11 @@ html, body {
 .postbox {
   display: inline-block;
   height: 100%; }
+  .postbox .card {
+    width: 3000px;
+    background-color: #1c1c1c; }
   .postbox .cover {
-    width: 40%;
+    width: 400px;
     height: 100%;
     background-size: cover;
     background-position: center;
@@ -35,7 +38,7 @@ html, body {
     transition: 0.5s 0s;
     cursor: pointer; }
     .postbox .cover:hover {
-      width: 42%;
+      width: 420px;
       height: 110%; }
       .postbox .cover:hover .infos {
         transform: translateX(-200px) translateY(-10px); }
@@ -58,9 +61,9 @@ html, body {
 
 @media screen and (max-width: 576px) {
   .cover {
-    margin: 0 100px; }
+    margin: 0 0px; }
   .infos {
-    transform: translateX(-50px); }
+    transform: translateX(-80px) translateY(-150px); }
     .infos h1 {
       font-size: 30px; }
     .infos h5 {
@@ -68,7 +71,7 @@ html, body {
 
 @media screen and (min-width: 577px) {
   .cover {
-    margin: 0 500px; }
+    margin: 0 400px; }
   .infos {
     transform: translateX(-200px); }
     .infos h1 {
