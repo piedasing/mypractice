@@ -20,13 +20,12 @@ var vm = new Vue({
   data: {
     now_index: 0 ,
     works: works,
-    span: 1200
+    span: 1000
   },
   computed: {
     computed_left(){
       this.span = $(window).width()
       var span = this.span
-      span = 3000
       console.log(span)
       var result = {
         "left":((-1)* this.now_index * span) + "px"
@@ -46,3 +45,8 @@ var vm = new Vue({
     }
   }
 });
+
+//畫面有變動，就重新整理畫面
+$(window).resize(function(){
+  window.location.reload();
+})

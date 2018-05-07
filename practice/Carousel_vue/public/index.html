@@ -21,13 +21,11 @@
     <div id="app">
       <div class="postarea">
         <div class="posts" :style="computed_left">
-          <div class="postbox" v-for="(w,id) in works" :class="{cur_item: id==now_index}">
-            <div class="card">
-              <div class="cover" :style="bg_css(w.cover)">
-                <div class="infos">
-                  <h1>{{w.title}}</h1>
-                  <h5>{{w.description}}</h5>
-                </div>
+          <div class="postbox" v-for="(w,id) in works" :class="{cur_item: id==now_index}"> 
+            <div class="cover" :style="bg_css(w.cover)">
+              <div class="infos">
+                <h1>{{w.title}}</h1>
+                <h5>{{w.description}}</h5>
               </div>
             </div>
           </div>
