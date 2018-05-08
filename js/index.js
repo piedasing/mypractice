@@ -21,7 +21,7 @@ cards = [
   },
   {
 	"title": "飯店房間(React)",
-	"preview": "https://piedasing.github.io/hotelroom-react-/"
+	"preview": "https://piedasing.github.io/react-practice/#/"
   }
 ]
 
